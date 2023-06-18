@@ -1,8 +1,8 @@
 # Mô tả
 Ứng dụng hiển thị các kết quả của cuộc đua f1 dựa trên dữ liệu lấy từ kết quả của cuộc đua f1 từ trang web [formula1](https://www.formula1.com/).
 # Chức năng
-- Trả kết quả races, drivers, teams, dhl fastest lap award theo năm.
-- Trả kết quả chi tiết của races, drivers, teams theo năm.
+- Trả và hiển thị kết quả races, drivers, teams, dhl fastest lap award theo năm.
+- Trả và hiển thị kết quả chi tiết của races, drivers, teams theo năm.
 # Triển khai
 - Khi clone respository về sẽ có 3 thư mục ${\color{red}\text{crawl}}$, ${\color{red}\text{client}}$, ${\color{red}\text{server}}$.
   
