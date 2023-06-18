@@ -8,3 +8,5 @@
 node_modules
 /client/.next
 /client/next-env.d.ts
+
+/server/dist
