@@ -38,6 +38,10 @@ const driverSchema: Schema = new Schema(
             type: String,
             required: false
         },
+        avg_point: {
+            type: String || Number,
+            required: false
+        },
         driverDetail: [driverDetailSchema]
     },
     { timestamps: true }

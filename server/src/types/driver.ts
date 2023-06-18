@@ -28,5 +28,6 @@ export interface IDriver extends Document {
     year: string
     firstname: string
     lastname: string
+    avg_point: string | number
     driverDetail: IDriverDetail[]
 }

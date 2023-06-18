@@ -14,6 +14,7 @@ const addDriver = async (req: Request, res: Response): Promise<any> => {
             year: body.year,
             firstname: body.firstname,
             lastname: body.lastname,
+            avg_point: body.avg_point,
             driverDetail: body.driverDetail
         })
     
@@ -29,9 +30,11 @@ const addDriver = async (req: Request, res: Response): Promise<any> => {
 
 const getDriverDetail = async (req: Request, res: Response): Promise<any> => {
     try {
-        const query = req.query as { year: string, firstname: string, lastname: string }        
+        const query = req.query as { year: string, firstname: string, lastname: string }   
+        
+        const where = query.year ? { year: query.year, firstname: { $regex: query.firstname, $options: 'i' }, lastname: { $regex: query.lastname, $options: 'i' } } : { firstname: { $regex: query.firstname, $options: 'i' }, lastname: { $regex: query.lastname, $options: 'i' } }
 
-        const driver = await Driver.findOne({ year: query.year, firstname: { $regex: query.firstname, $options: 'i' }, lastname: { $regex: query.lastname, $options: 'i' } })
+        const driver = await Driver.find(where)
 
         return res.status(201).json({ data: driver })
     } catch (error) {

@@ -152,6 +152,7 @@ export interface IDriver {
     year: string
     firstname: string
     lastname: string
+    avg_point: string | number
     driverDetail: IDriverDetail[]
 }
 

@@ -52,6 +52,9 @@ async function getDriverDetail(url) {
         driverDetail.push({ grandPrix, date, car, racePosition, point })
     })
 
+    const avg_point = driverDetail.reduce((total, next) => total + Number(next.point), 0) / driverDetail.length
+
+    driver.avg_point = avg_point.toFixed(2)
     driver.driverDetail = driverDetail
 
     // done
