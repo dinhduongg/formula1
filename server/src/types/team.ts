@@ -22,5 +22,6 @@ export interface ITeamDetail extends Document {
 export interface ITeam extends Document {
     year: string
     name: string
+    avg_point: string | number
     teamDetail: ITeamDetail[]
 }

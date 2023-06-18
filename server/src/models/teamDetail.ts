@@ -23,6 +23,9 @@ const teamSchema: Schema = new Schema(
             type: String,
             required: true
         },
+        avg_point: {
+            type: String || Number,
+        },
         teamDetail: [teamDetailSchema]
     },
     { timestamps: true }

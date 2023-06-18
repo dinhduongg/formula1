@@ -179,6 +179,7 @@ export interface ITeamDetail {
 export interface ITeam {
     year: string
     name: string
+    avg_point: string |number
     teamDetail: ITeamDetail[]
 }
 

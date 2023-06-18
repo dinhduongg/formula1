@@ -49,7 +49,10 @@ async function getTeamDetail(url) {
         teamsDetail.push({ grandPrix, date, point })
     })
     
+    const avg_point = teamsDetail.reduce((total, next) => total + Number(next.point), 0) / teamsDetail.length
+
     team.year = year
+    team.avg_point = avg_point.toFixed(2)
     team.teamDetail = teamsDetail
 
     // done
